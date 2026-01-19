@@ -31,7 +31,7 @@ export async function loadCSVData(dataset: Dataset): Promise<CSVRow[]> {
  */
 function parseCSV(csvText: string): CSVRow[] {
   const lines = csvText.trim().split('\n');
-  if (lines.length === 0) return [];
+  if (lines.length === 0 || !lines[0]) return [];
   
   // 第一行是 header
   const headers = lines[0].split(',').map(h => h.trim());
@@ -44,7 +44,6 @@ function parseCSV(csvText: string): CSVRow[] {
     const row: CSVRow = {};
     headers.forEach((header, idx) => {
       const value = values[idx].trim();
-      // 尝试转换为数字
       const numValue = parseFloat(value);
       row[header] = isNaN(numValue) ? value : numValue;
     });
