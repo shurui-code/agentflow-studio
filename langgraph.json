@@ -1,0 +1,9 @@
+{
+  "dependencies": ["."],
+  "graphs": {
+    "baseline_sequential": "./langgraph/baseline.ts:buildSequentialBaseline",
+    "baseline_voting": "./langgraph/baseline.ts:buildVotingBaseline",
+    "baseline_full_pipeline": "./langgraph/baseline.ts:buildFullPipeline"
+  },
+  "env": ".env"
+}
