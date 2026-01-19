@@ -24,7 +24,7 @@
     "@langchain/openai": "^0.3.17",
     "axios": "^1.13.2",
     "dotenv": "^17.2.3",
-    "next": "15.1.6",
+    "next": "15.1.11",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-resizable-panels": "^4.2.0",
